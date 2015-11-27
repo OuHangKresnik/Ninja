@@ -10,6 +10,10 @@
 		- Based on Inputs, more data is needed for decision making  
 		- Generation of signals depends on inputs
 		- Signals can be generated from other models
+		- Properties:  
+			- default value, each signal with primitive type will have a default value  
+			- log or not, default is true  
+			- category
 	3. Functions & Operators  
 		- Java classes and their methods can be embedded in as Functions  
 		- Input of functions is signals, output of functions shares the same type as Java
@@ -21,26 +25,47 @@
 		- Functions can be imported from different files  
 		- Other models
 	6. Output
-		- All signals can be output  
+		- There are three kinds of output: 
+			- Output to log, and all signals will be output to log by default
+			- 
 		- Output can server as input for other models
 ## Requirements
 	1. Change of models can immediately be applied to systems without restart  
 	2. Java Code can be embedded into functions
 
 ## Example
-import java.JavaDataClass
-import java.JavaClass1
-import java.JavaClass2
+package java.ouhang.dsl.antlr.decisionmodel;
+import java.JavaDataClass;
+import java.JavaClass1;
+import java.JavaClass2;
 
-Input {
-	field1 : Boolean
-	field2 : Long
-	field3 : Double
-	field4 : List<String>
-	field5 : List<JavaDataClass>
+input {
+	field1 : Boolean;
+	field2 : Long;
+	field3 : Double;
+	field4 : List<String>;
+	field5 : List<JavaDataClass>;
 }
 
-signal1 : Double = JavaClass1\[Method1\](field3, field3)
-signal2 : JavaClass2 = JavaClass\[Method2\](field2, field3)
-TODO (kresnik)
+func double functionName (par1 : Double, par2 : Double) {
+	return par1 + par2;
+}
 
+double signal1 = JavaClass1.method1(field3, field3);
+signal1.default=123;
+JavaClass2 signal2 = JavaClass.method2(field2, field3);
+double signal3 = functionName(signal1, field3);
+
+model double subModel {
+	return signal3 + signal1;
+}
+
+model string mainModel {
+	if (field1) {
+		return "APPROVE";		
+	} elif (field2 > subModel) {
+		return "REVIEW";		
+	} else {
+		return "APPROVE";
+	}
+}
