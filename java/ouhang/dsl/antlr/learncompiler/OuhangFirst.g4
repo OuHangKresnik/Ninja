@@ -106,7 +106,6 @@ JavaClassType  // doesn't support "extends", "super", template and array in type
     :    Identifier | Identifier '<' JavaClassType '>'
     ;
 
-
 /**
  * Literals, a much more simple version than Java literals.
  * For numeric literals, only support decimal.
@@ -121,7 +120,11 @@ Literal
     | DoubleLiteral
     ;
 StringLiteral //? support unicode should check
-    :    '"' (~["\\\r\n] | '\\' (. | EOF))* '"'
+    :    '"' (()+)? '"'
+    ;    
+CharLiteral
+    :    '\'' SingleCharacter '\''
+    |    '\'' EscapeSequence '\''
     ;
 BooleanLiteral
     :    TRUE | FALSE
@@ -137,6 +140,22 @@ FloatLiteral
     ;
 DoubleLiteral
     :    [+-]? ([1-9]+ 0*)* [0-9] '.' [0-9]+ 'd'
+    ;
+fragment SingalCharacter
+    :    ~['\\]
+    ;
+fragment EscapeSequence
+    :    '\\' [btnfr"'\\]
+    |    '\\' OctalDigit                              // Octal Escape
+    |    '\\' OctalDigit OctalDigit                   // Octal Escape
+    |    '\\' [0-3] OctalDigit OctalDigit             // Octal Escape
+    |    '\\' 'u' HexDigit HexDigit HexDigit HexDigit // Unicode Escape
+    ;
+fragment OctalDigit
+    :    [0-7]
+    ;
+fragment HexDigit
+    :    [0-9a-fA-F]
     ;
 
 /**
