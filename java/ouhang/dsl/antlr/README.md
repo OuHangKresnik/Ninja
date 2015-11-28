@@ -20,3 +20,13 @@
 	 - RE is subset of CFG; CFG: definition can be recursive  
 	 - CFG specifies how to convert token stream into parse tree  
 	 - Ambiguous grammar can result in different parse trees after parsing
+
+## More Documentation About Antlr 4
+	1. Comments: /\*\* \*/ and //
+	2. Identifiers:
+	 - Token names should always start with a capital letter for lexer  
+	 - Antlr accepts Unicode characters
+	3. Keywords:
+	 - Antlr has reserved words: import, fragment, lexer, parser, grammar, return, locals, throws, catch, finally, mode, options, tokens.  
+	 - do not use the word "rule" as a rule name as well.
+	4. 
