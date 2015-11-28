@@ -2,19 +2,19 @@
  * Define a grammar called OuhangFirst
  * this grammar is similar to Java while much simpler
  */
-grammar OuhangFirst;
+grammar DeciLan;
 
 /**
  * Package.
  */
 packageDeclaration
-    :    PACKAGE Identifier ('.' Identifier)* ';'
+    :    PACKAGE Identifier (DOT Identifier)* ';'
     ; 
 /**
  * Import.
  */
 importDeclaration
-    :    IMPORT Identifier ('.' Identifier)* ('.*')? ';'
+    :    IMPORT Identifier (DOT Identifier)* ('.*')? ';'
     ;
 /**
  * Input.
@@ -41,8 +41,8 @@ modelDeclaration
     :    MODEL Type Identifier 
     |    MODEL VOID Identifier
     ;
-fragment parameterList
-    :    '(' (parameterDeclaration ',')* parameterDeclaration? ')'
+parameterList
+    :    '(' ((parameterDeclaration ',')* parameterDeclaration)? ')'
     ;
 parameterDeclaration
     :    Type Identifier
@@ -65,7 +65,7 @@ localVariableDeclarationStatement
     ;
 
 variableAssignmentStatement
-    |    Identifier ASSIGN expression ';'
+    :    Identifier ASSIGN expression ';'
     |    Identifier ADD_ASSIGN expression ';'
     |    Identifier SUB_ASSIGN expression ';'
     |    Identifier MUL_ASSIGN expression ';' 
@@ -85,7 +85,7 @@ expression // Expression will always have a value
     |    expression (LT | LTE | GT | GTE | EQ | NEQ | AND | OR) expression
     ;
 
-fragment methodParameterList
+methodParameterList
     :    (Identifier ',')* Identifier
     ;
 
@@ -120,7 +120,7 @@ Literal
     | DoubleLiteral
     ;
 StringLiteral //? support unicode should check
-    :    '"' (()+)? '"'
+    :    '"' ((CharLiteral)+)? '"'
     ;    
 CharLiteral
     :    '\'' SingleCharacter '\''
@@ -130,18 +130,18 @@ BooleanLiteral
     :    TRUE | FALSE
     ;
 IntegerLiteral
-    :    [+-]? ([1-9]+ 0*)* [0-9]
+    :    [+-]? ([1-9]+ '0'*)* [0-9]
     ;
 LongLiteral
     :    IntegerLiteral 'L'
     ;
 FloatLiteral
-    :    [+-]? ([1-9]+ 0*)* [0-9] '.' [0-9]+ 'f'?
+    :    [+-]? ([1-9]+ '0'*)* [0-9] '.' [0-9]+ 'f'?
     ;
 DoubleLiteral
-    :    [+-]? ([1-9]+ 0*)* [0-9] '.' [0-9]+ 'd'
+    :    [+-]? ([1-9]+ '0'*)* [0-9] '.' [0-9]+ 'd'
     ;
-fragment SingalCharacter
+fragment SingleCharacter
     :    ~['\\]
     ;
 fragment EscapeSequence
@@ -179,7 +179,7 @@ CHAR          : 'char'      ;
 // Keywords for control: currently only contains if-else logic
 IF            : 'if'   ;
 ELSE          : 'else' ;
-IFELSE        : 'elif' ;
+ELIF          : 'elif' ;
 
 TRUE          : 'true' ;
 FALSE         : 'false';
@@ -223,9 +223,9 @@ COMMA         : ','    ;
 DOT           : '.'    ;
 
 // Ignore
-WS            : [ \t\n\r]+    -> skip;
-COMMENT       : '/*' .*? '*/'
-              | '//' ~[\r\n]* -> skip;
+WS            : [ \t\n\r\u000c]+    -> skip;
+COMMENT       : '/*' .*? '*/'       -> skip;
+LINE_COMMENT  : '//' ~[\r\n]*       -> skip;
 /**
  * CR (Carriage Return): \r, used in Mac OS before X
  * LF (Line Feed): \n, used in Unix/Max OS X
