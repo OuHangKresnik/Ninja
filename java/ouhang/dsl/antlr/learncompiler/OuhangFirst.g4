@@ -39,11 +39,11 @@ functionDeclaration
  */
 modelDeclaration
     :    MODEL Type Identifier 
-	|    MODEL VOID Identifier
+    |    MODEL VOID Identifier
     ;
 fragment parameterList
     :    '(' (parameterDeclaration ',')* parameterDeclaration? ')'
-	;
+    ;
 parameterDeclaration
     :    Type Identifier
     ;
@@ -53,7 +53,7 @@ parameterDeclaration
  */
 statement
     :    localVariableDeclarationStatement
-	|    variableAssignmentStatement
+    |    variableAssignmentStatement
     |    '{' statement '}'
     |    IF '(' expression ')' statement
          ELIF '(' expression ')' statement
@@ -65,13 +65,13 @@ localVariableDeclarationStatement
     ;
 
 variableAssignmentStatement
-	|    Identifier ASSIGN expression ';'
+    |    Identifier ASSIGN expression ';'
     |    Identifier ADD_ASSIGN expression ';'
     |    Identifier SUB_ASSIGN expression ';'
     |    Identifier MUL_ASSIGN expression ';' 
     |    Identifier DIV_ASSIGN expression ';'
     |    Identifier MOD_ASSIGN expression ';' 
-	;
+    ;
 
 expression // Expression will always have a value
     :    (Identifier | NULL | NAN)
@@ -124,7 +124,7 @@ StringLiteral //? support unicode should check
     :    '"' (~["\\\r\n] | '\\' (. | EOF))* '"'
     ;
 BooleanLiteral
-	:    TRUE | FALSE
+    :    TRUE | FALSE
     ;
 IntegerLiteral
     :    [+-]? ([1-9]+ 0*)* [0-9]
@@ -162,11 +162,11 @@ IF            : 'if'   ;
 ELSE          : 'else' ;
 IFELSE        : 'elif' ;
 
-TRUE          : 'true'      ;
-FALSE         : 'false'     ;
-NULL          : 'null'      ;
-NAN           : 'nan'       ;
-VOID          : 'void'      ;
+TRUE          : 'true' ;
+FALSE         : 'false';
+NULL          : 'null' ;
+NAN           : 'nan'  ;
+VOID          : 'void' ;
 
 // Operators
 GT            : '>'    ;

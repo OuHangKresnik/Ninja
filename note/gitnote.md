@@ -13,4 +13,5 @@
 	Open ~/.bash_profile and add:  
 		export GIT_EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim'  
    It works.
-3. Use git log you can see all commits for this branch
+3. Use "git log" you can see all commits for this branch
+4. git remote set-url origin https://OuHangKresnik@github.com/OuHangKresnik/Ninja.git
