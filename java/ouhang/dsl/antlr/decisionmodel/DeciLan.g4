@@ -8,44 +8,49 @@ grammar DeciLan;
  * Package.
  */
 packageDeclaration
-    :    PACKAGE Identifier (DOT Identifier)* ';'
+    :    'package' Identifier (DOT Identifier)* ';'
     ; 
 /**
  * Import.
  */
 importDeclaration
-    :    IMPORT Identifier (DOT Identifier)* ('.*')? ';'
+    :    'import' Identifier (DOT Identifier)* ('.*')? ';'
     ;
+/**
+ * Inject.
+ */
+injectDeclaration
+    :    'inject' '{' fieldStatement* '}'
+    ;
+
 /**
  * Input.
  */
 inputDeclaration
-    :    INPUT '{' inputFieldsStatement* '}'
-    ;
-inputFieldsStatement
-    :    Identifier ':' Type ';'
+    :    'input' '{' fieldStatement* '}'
     ;
 
+fieldStatement
+    :    Identifier ':' (Identifier | TypeWithParameters) ';'
+    ;
 /**
  * Function.
  */
 functionDeclaration
-    :    FUNCTION Type Identifier parameterList '{' statement* RETURN expression ';' '}'
-    |    FUNCTION VOID Identifier parameterList '{' statement* '}'
+    :    'func' (Identifier | TypeWithParameters) Identifier parameterList '{' statement* '}'
     ;
 
 /**
  * Model.
  */
 modelDeclaration
-    :    MODEL Type Identifier 
-    |    MODEL VOID Identifier
+    :    'model' (Identifier | TypeWithParameters) Identifier '{' statement* '}'
     ;
 parameterList
     :    '(' ((parameterDeclaration ',')* parameterDeclaration)? ')'
     ;
 parameterDeclaration
-    :    Type Identifier
+    :    (Identifier | TypeWithParameters) Identifier
     ;
 
 /**
@@ -54,56 +59,74 @@ parameterDeclaration
 statement
     :    localVariableDeclarationStatement
     |    variableAssignmentStatement
+    |    exprCallMethod ';'
     |    '{' statement '}'
-    |    IF '(' expression ')' statement
-         ELIF '(' expression ')' statement
-         ( ELSE statement )?
+    |    'if' '(' expr ')' statement
+         ('elif' '(' expr ')' statement)?
+         ( 'else' statement )?
+    |    returnStatement
     ;
-
+returnStatement
+    :    'return' expr ';'
+    ;
 localVariableDeclarationStatement
-    :    Type variableAssignmentStatement
+    :    (Identifier | TypeWithParameters) Identifier ';'
+    |    (Identifier | TypeWithParameters) variableAssignmentStatement
     ;
 
 variableAssignmentStatement
-    :    Identifier ASSIGN expression ';'
-    |    Identifier ADD_ASSIGN expression ';'
-    |    Identifier SUB_ASSIGN expression ';'
-    |    Identifier MUL_ASSIGN expression ';' 
-    |    Identifier DIV_ASSIGN expression ';'
-    |    Identifier MOD_ASSIGN expression ';' 
+    :    Identifier ASSIGN expr ';'
+    |    Identifier ADD_ASSIGN expr ';'
+    |    Identifier SUB_ASSIGN expr ';'
+    |    Identifier MUL_ASSIGN expr ';' 
+    |    Identifier DIV_ASSIGN expr ';'
+    |    Identifier MOD_ASSIGN expr ';' 
     ;
 
-expression // Expression will always have a value
-    :    (Identifier | NULL | NAN)
-    |    (BooleanLiteral | Literal)
-    |    Identifier '.' Identifier '(' methodParameterList ')'
-    |    Identifier '(' methodParameterList ')' // from func
-    |    '(' expression ')'
-    |    NOT expression
-    |    expression (MUL | DIV | MOD) expression
-    |    expression (ADD | SUB) expression
-    |    expression (LT | LTE | GT | GTE | EQ | NEQ | AND | OR) expression
+expr // Expression will always have a value
+    :    exprBooleanOper | exprAddSub | exprMulDivMod | exprNot | exprAtom 
     ;
 
-methodParameterList
-    :    (Identifier ',')* Identifier
+exprBooleanOper
+    :    (exprAtom | exprNot | exprMulDivMod | exprAddSub) 
+         ((LT | LTE | GT | GTE | EQ | NEQ | AND | OR) 
+         (exprAtom | exprNot | exprMulDivMod | exprAddSub))+
+    ;
+
+exprAddSub
+    :    (exprAtom | exprNot | exprMulDivMod) ((ADD | SUB) (exprAtom | exprNot | exprMulDivMod))+
+    ;
+
+exprMulDivMod
+    :    (exprAtom | exprNot) ((MUL | DIV | MOD) (exprAtom | exprNot))+
+    ;
+
+exprNot
+    :    NOT exprAtom
+    ;
+
+exprAtom
+    :    Identifier | NULL | NAN | literal
+    |    exprCallMethod 
+    |    '(' expr ')'
+    ;
+
+exprCallMethod
+    :    (Identifier '.')? Identifier '(' ((expr ',')* expr)?')'
     ;
 
 /**
  * Tokens, include:
- * identifiers, types, keywords, literals, operators, separators and esc.
+ * identifiers, types, literals, operators, separators and esc.
  */
 Identifier // For Variable, Model or Function name
     :    [a-zA-Z] [a-zA-Z_0-9]*    // must start with letter
     ;
-Type // doesn't support array in Java like int[]
-    :    PrimitiveType | JavaClassType
+TypeWithParameters
+    :    Identifier TypeParameters
     ;
-PrimitiveType
-    :    INT | LONG | DOUBLE | FLOAT | BOOLEAN | STRING | CHAR
-    ;
-JavaClassType  // doesn't support "extends", "super", template and array in type
-    :    Identifier | Identifier '<' JavaClassType '>'
+TypeParameters  // doesn't support "extends", "super", template and array [] in type
+    :    '<' (Identifier | TypeWithParameters) (',' (Identifier | TypeWithParameters))* '>'
     ;
 
 /**
@@ -111,7 +134,7 @@ JavaClassType  // doesn't support "extends", "super", template and array in type
  * For numeric literals, only support decimal.
  * Doesn't support scientific notation currently.
  */
-Literal
+literal
     : StringLiteral
     | BooleanLiteral
     | IntegerLiteral
@@ -120,7 +143,7 @@ Literal
     | DoubleLiteral
     ;
 StringLiteral //? support unicode should check
-    :    '"' ((CharLiteral)+)? '"'
+    :    '"' StringCharacters? '"'
     ;    
 CharLiteral
     :    '\'' SingleCharacter '\''
@@ -130,16 +153,31 @@ BooleanLiteral
     :    TRUE | FALSE
     ;
 IntegerLiteral
-    :    [+-]? ([1-9]+ '0'*)* [0-9]
+    :    NumericSign? (NonZeroDigits+ '0'*)* Digits
     ;
 LongLiteral
     :    IntegerLiteral 'L'
     ;
 FloatLiteral
-    :    [+-]? ([1-9]+ '0'*)* [0-9] '.' [0-9]+ 'f'?
+    :    NumericSign? (NonZeroDigits+ '0'*)* Digits '.' Digits+ 'f'?
     ;
 DoubleLiteral
-    :    [+-]? ([1-9]+ '0'*)* [0-9] '.' [0-9]+ 'd'
+    :    NumericSign? (NonZeroDigits+ '0'*)* Digits '.' Digits+ 'd'
+    ;
+fragment NumericSign
+    :    [+-]
+    ;
+fragment Digits
+    :    [0-9]
+    ;
+fragment NonZeroDigits
+    :    [1-9]
+    ;
+fragment StringCharacters
+    :    StringCharacter+
+    ;
+fragment StringCharacter
+    :    ~["\\]
     ;
 fragment SingleCharacter
     :    ~['\\]
@@ -161,26 +199,6 @@ fragment HexDigit
 /**
  * Keywords.
  */
-PACKAGE       : 'package'   ;
-IMPORT        : 'import'    ;
-INPUT         : 'input'     ;
-FUNCTION      : 'func'      ;
-MODEL         : 'model'     ;
-RETURN        : 'return'    ;
-
-INT           : 'int'       ;
-LONG          : 'long'      ;
-DOUBLE        : 'double'    ;
-FLOAT         : 'float'     ;
-STRING        : 'string'    ;
-BOOLEAN       : 'boolean'   ;
-CHAR          : 'char'      ;
-
-// Keywords for control: currently only contains if-else logic
-IF            : 'if'   ;
-ELSE          : 'else' ;
-ELIF          : 'elif' ;
-
 TRUE          : 'true' ;
 FALSE         : 'false';
 NULL          : 'null' ;
@@ -231,6 +249,4 @@ LINE_COMMENT  : '//' ~[\r\n]*       -> skip;
  * LF (Line Feed): \n, used in Unix/Max OS X
  * CR + LF: \r\n, used in Windows
  */
-NEWLINE       : '\r'? '\n' | '\r'
-              ;
 

@@ -27,6 +27,16 @@ public interface DeciLanListener extends ParseTreeListener {
 	 */
 	void exitImportDeclaration(DeciLanParser.ImportDeclarationContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link DeciLanParser#injectDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterInjectDeclaration(DeciLanParser.InjectDeclarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DeciLanParser#injectDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitInjectDeclaration(DeciLanParser.InjectDeclarationContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link DeciLanParser#inputDeclaration}.
 	 * @param ctx the parse tree
 	 */
@@ -37,15 +47,15 @@ public interface DeciLanListener extends ParseTreeListener {
 	 */
 	void exitInputDeclaration(DeciLanParser.InputDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DeciLanParser#inputFieldsStatement}.
+	 * Enter a parse tree produced by {@link DeciLanParser#fieldStatement}.
 	 * @param ctx the parse tree
 	 */
-	void enterInputFieldsStatement(DeciLanParser.InputFieldsStatementContext ctx);
+	void enterFieldStatement(DeciLanParser.FieldStatementContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DeciLanParser#inputFieldsStatement}.
+	 * Exit a parse tree produced by {@link DeciLanParser#fieldStatement}.
 	 * @param ctx the parse tree
 	 */
-	void exitInputFieldsStatement(DeciLanParser.InputFieldsStatementContext ctx);
+	void exitFieldStatement(DeciLanParser.FieldStatementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link DeciLanParser#functionDeclaration}.
 	 * @param ctx the parse tree
@@ -97,6 +107,16 @@ public interface DeciLanListener extends ParseTreeListener {
 	 */
 	void exitStatement(DeciLanParser.StatementContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link DeciLanParser#returnStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterReturnStatement(DeciLanParser.ReturnStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DeciLanParser#returnStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitReturnStatement(DeciLanParser.ReturnStatementContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link DeciLanParser#localVariableDeclarationStatement}.
 	 * @param ctx the parse tree
 	 */
@@ -117,23 +137,83 @@ public interface DeciLanListener extends ParseTreeListener {
 	 */
 	void exitVariableAssignmentStatement(DeciLanParser.VariableAssignmentStatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DeciLanParser#expression}.
+	 * Enter a parse tree produced by {@link DeciLanParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpression(DeciLanParser.ExpressionContext ctx);
+	void enterExpr(DeciLanParser.ExprContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DeciLanParser#expression}.
+	 * Exit a parse tree produced by {@link DeciLanParser#expr}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpression(DeciLanParser.ExpressionContext ctx);
+	void exitExpr(DeciLanParser.ExprContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DeciLanParser#methodParameterList}.
+	 * Enter a parse tree produced by {@link DeciLanParser#exprBooleanOper}.
 	 * @param ctx the parse tree
 	 */
-	void enterMethodParameterList(DeciLanParser.MethodParameterListContext ctx);
+	void enterExprBooleanOper(DeciLanParser.ExprBooleanOperContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DeciLanParser#methodParameterList}.
+	 * Exit a parse tree produced by {@link DeciLanParser#exprBooleanOper}.
 	 * @param ctx the parse tree
 	 */
-	void exitMethodParameterList(DeciLanParser.MethodParameterListContext ctx);
+	void exitExprBooleanOper(DeciLanParser.ExprBooleanOperContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DeciLanParser#exprAddSub}.
+	 * @param ctx the parse tree
+	 */
+	void enterExprAddSub(DeciLanParser.ExprAddSubContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DeciLanParser#exprAddSub}.
+	 * @param ctx the parse tree
+	 */
+	void exitExprAddSub(DeciLanParser.ExprAddSubContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DeciLanParser#exprMulDivMod}.
+	 * @param ctx the parse tree
+	 */
+	void enterExprMulDivMod(DeciLanParser.ExprMulDivModContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DeciLanParser#exprMulDivMod}.
+	 * @param ctx the parse tree
+	 */
+	void exitExprMulDivMod(DeciLanParser.ExprMulDivModContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DeciLanParser#exprNot}.
+	 * @param ctx the parse tree
+	 */
+	void enterExprNot(DeciLanParser.ExprNotContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DeciLanParser#exprNot}.
+	 * @param ctx the parse tree
+	 */
+	void exitExprNot(DeciLanParser.ExprNotContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DeciLanParser#exprAtom}.
+	 * @param ctx the parse tree
+	 */
+	void enterExprAtom(DeciLanParser.ExprAtomContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DeciLanParser#exprAtom}.
+	 * @param ctx the parse tree
+	 */
+	void exitExprAtom(DeciLanParser.ExprAtomContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DeciLanParser#exprCallMethod}.
+	 * @param ctx the parse tree
+	 */
+	void enterExprCallMethod(DeciLanParser.ExprCallMethodContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DeciLanParser#exprCallMethod}.
+	 * @param ctx the parse tree
+	 */
+	void exitExprCallMethod(DeciLanParser.ExprCallMethodContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DeciLanParser#literal}.
+	 * @param ctx the parse tree
+	 */
+	void enterLiteral(DeciLanParser.LiteralContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DeciLanParser#literal}.
+	 * @param ctx the parse tree
+	 */
+	void exitLiteral(DeciLanParser.LiteralContext ctx);
 }

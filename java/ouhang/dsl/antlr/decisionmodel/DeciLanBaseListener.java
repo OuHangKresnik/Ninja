@@ -39,6 +39,18 @@ public class DeciLanBaseListener implements DeciLanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterInjectDeclaration(DeciLanParser.InjectDeclarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitInjectDeclaration(DeciLanParser.InjectDeclarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterInputDeclaration(DeciLanParser.InputDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -51,13 +63,13 @@ public class DeciLanBaseListener implements DeciLanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInputFieldsStatement(DeciLanParser.InputFieldsStatementContext ctx) { }
+	@Override public void enterFieldStatement(DeciLanParser.FieldStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitInputFieldsStatement(DeciLanParser.InputFieldsStatementContext ctx) { }
+	@Override public void exitFieldStatement(DeciLanParser.FieldStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -123,6 +135,18 @@ public class DeciLanBaseListener implements DeciLanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterReturnStatement(DeciLanParser.ReturnStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitReturnStatement(DeciLanParser.ReturnStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterLocalVariableDeclarationStatement(DeciLanParser.LocalVariableDeclarationStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -147,25 +171,97 @@ public class DeciLanBaseListener implements DeciLanListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpression(DeciLanParser.ExpressionContext ctx) { }
+	@Override public void enterExpr(DeciLanParser.ExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpression(DeciLanParser.ExpressionContext ctx) { }
+	@Override public void exitExpr(DeciLanParser.ExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMethodParameterList(DeciLanParser.MethodParameterListContext ctx) { }
+	@Override public void enterExprBooleanOper(DeciLanParser.ExprBooleanOperContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMethodParameterList(DeciLanParser.MethodParameterListContext ctx) { }
+	@Override public void exitExprBooleanOper(DeciLanParser.ExprBooleanOperContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExprAddSub(DeciLanParser.ExprAddSubContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExprAddSub(DeciLanParser.ExprAddSubContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExprMulDivMod(DeciLanParser.ExprMulDivModContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExprMulDivMod(DeciLanParser.ExprMulDivModContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExprNot(DeciLanParser.ExprNotContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExprNot(DeciLanParser.ExprNotContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExprAtom(DeciLanParser.ExprAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExprAtom(DeciLanParser.ExprAtomContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExprCallMethod(DeciLanParser.ExprCallMethodContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExprCallMethod(DeciLanParser.ExprCallMethodContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterLiteral(DeciLanParser.LiteralContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLiteral(DeciLanParser.LiteralContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

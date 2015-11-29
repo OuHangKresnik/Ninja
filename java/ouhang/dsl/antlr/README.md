@@ -29,4 +29,4 @@
 	3. Keywords:
 	 - Antlr has reserved words: import, fragment, lexer, parser, grammar, return, locals, throws, catch, finally, mode, options, tokens.  
 	 - do not use the word "rule" as a rule name as well.
-	4. 
+	4. When writing the rules, be careful of ambiguity and the left-recursive rule. 
