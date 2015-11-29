@@ -1,4 +1,7 @@
 // Generated from DeciLan.g4 by ANTLR 4.5.1
+
+package java.ouhang.dsl.antlr.decisionmodel;
+
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;

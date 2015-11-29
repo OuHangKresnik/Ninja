@@ -1,5 +1,8 @@
 // Generated from DeciLan.g4 by ANTLR 4.5.1
 
+package java.ouhang.dsl.antlr.decisionmodel;
+
+
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
