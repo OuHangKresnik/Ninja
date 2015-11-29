@@ -1,6 +1,6 @@
 // Generated from DeciLan.g4 by ANTLR 4.5.1
 
-package java.ouhang.dsl.antlr.decisionmodel;
+package java.ouhang.dsl.decisionmodel.antlr;
 
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;

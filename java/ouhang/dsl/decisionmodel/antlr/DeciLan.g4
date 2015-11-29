@@ -5,7 +5,7 @@
 grammar DeciLan;
 
 @header {
-package java.ouhang.dsl.antlr.decisionmodel;
+package java.ouhang.dsl.decisionmodel.antlr;
 }
 
 /**
