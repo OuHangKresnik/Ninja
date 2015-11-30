@@ -4,9 +4,11 @@
  */
 grammar DeciLan;
 
-@header {
-package java.ouhang.dsl.decisionmodel.antlr;
-}
+/**
+ * @header {
+ * package java.ouhang.dsl.decisionmodel.antlr;
+ *}
+ */
 
 /**
  * Package.
