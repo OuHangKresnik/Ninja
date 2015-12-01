@@ -46,6 +46,13 @@ functionDeclaration
     ;
 
 /**
+ * Signal Attributes.
+ */
+signalAttributesDeclaration
+    :    Identifier '{' variableAssignmentStatement+ '}'
+    ;
+
+/**
  * Model.
  */
 modelDeclaration
