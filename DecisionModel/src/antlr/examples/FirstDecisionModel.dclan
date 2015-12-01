@@ -1,11 +1,13 @@
 /**
  * This is the first decision model example.
  */
-package java.ouhang.dsl.antlr.decisionmodel.examples;
-import java.ouhang.dsl.antlr.decisionmodel.FirstDeriver;
-import java.ouhang.dsl.antlr.decisionmodel.SecondDeriver;
-import java.ouhang.dsl.antlr.decisionmodel.FirstClass;
-import java.ouhang.dsl.antlr.decisionmodel.antherpackage.*;
+package ouhang.decisionmodel.model.examples;
+
+import-model ouhang.decisionmodel.model.examples.FirstTemplateModel;
+
+import ouhang.decisionmodel.deriver.FirstDeriver;
+import ouhang.decisionmodel.deriver.SecondDeriver;
+import ouhang.decisionmodel.data.FirstClass;
 
 inject {
   deriver1 : FirstDeriver;
@@ -23,36 +25,48 @@ input {
 }
 
 double signal1 = deriver1.method1(field_double, field_double);
+signal1 { log = false; default-value = 0.0d; category = "significant" }
+
 int signal2 = field_class.get();
-int signal3 = field_class.get(1);
 int signal_int = -1000;
 long signal_long = -1000L;
 double signal_double = -1000.0d;
 float signal_float = -10f;
 
-func double function1 (double par1, double par2) {
-  return par1 + par2;
-}
-func void function2 (FirstClass par1) {
-  par1.sendMessage();
+FirstTemplateModel model = generateModel(
+    FirstTemplateModel,
+    field_double,
+    field_int,
+    field_long,
+    field_string,
+    signal_double);
+
+func double add(double a, double b) {
+  return a + b;
 }
 
-model double SubModel {
-  function2(field_class);
+func void sendMessage(FirstDeriver deriver) {
+  deriver.sendMessage();
+}
+
+model double subModel {
+  sendMessage(deriver1);
   double local_var;
   if (field_booleab) {
-    local_var = 1.0d;
+    local_var = model.minus(field_double, field_double);
   } elif (field_int > 12) {
-    local_var = function1(field_double, field_double);
+    local_var = add(field_double, field_double);
   } else { 
     local_var = deriver2.getDouble();
   }
   return local_var;
 }
+subModel { default-value = 0.0d; }
+
 // Main Model
-model string MainModel {
-  if (SubModel != 2) {
-    return "APPROVE";
+model string mainModel {
+  if (subModel != 2) {
+    return model.getMainModel();
   } else {
     return "DENY";   
   }

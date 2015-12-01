@@ -26,7 +26,7 @@ dependencies {
 }
 
 ext.antlr = [
-    grammarPackage: 'java.ouhang.decisionmodel.antlr',
+    grammarPackage: 'ouhang.decisionmodel.antlr',
     sourceDir: 'src/antlr',
     destinationDir: 'src-generated/antlr'
 ]

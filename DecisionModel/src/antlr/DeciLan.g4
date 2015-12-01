@@ -5,21 +5,21 @@
 grammar DeciLan;
 
 /**
- * @header {
- * package java.ouhang.dsl.decisionmodel.antlr;
- *}
- */
-
-/**
  * Package.
  */
 packageDeclaration
     :    'package' Identifier (DOT Identifier)* ';'
     ; 
 /**
- * Import.
+ * Import model.
  */
-importDeclaration
+importModelDeclaration
+    :    'import-model' Identifier (DOT Identifier)* ('.*')? ';'
+    ;
+/**
+ * Import java.
+ */
+importJavaDeclaration
     :    'import' Identifier (DOT Identifier)* ('.*')? ';'
     ;
 /**
@@ -28,7 +28,6 @@ importDeclaration
 injectDeclaration
     :    'inject' '{' fieldStatement* '}'
     ;
-
 /**
  * Input.
  */
