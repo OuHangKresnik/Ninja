@@ -2,4 +2,6 @@
 .class
 .swp
 bin
+build
+src-generated
 .gradle
