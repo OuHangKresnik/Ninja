@@ -5,7 +5,6 @@
 	1. Inputs  
 		- Decision Model has inputs which comes from requests  
 		- Inputs share the same data types with Java
-		- Output of other models can server as input
 	2. Signals
 		- Based on Inputs, more data is needed for decision making  
 		- Generation of signals depends on inputs
@@ -22,13 +21,16 @@
 		- Special module for offline learning results  
 		- Support SVM, Decision Tree, Classifiers
 	5. Import
-		- Functions can be imported from different files  
-		- Other models
+		- Can import java class and other model files  
+		- Different from "import" in Java, it's more like an indicator
 	6. Output
 		- There are three kinds of output: 
-			- Output to log, and all signals will be output to log by default
-			- 
-		- Output can server as input for other models
+			- Output to log, and all signals are logged by default  
+			- Output to special ETL; Signals can be grouped for this purpose.
+		- Output can serve as signals for other models
 ## Requirements
-	1. Change of models can immediately be applied to systems without restart  
-	2. Java Code can be embedded into functions
+	1. Change of models can immediately be applied to systems without restart 
+		- For this purpose, there are two ways to do it:  
+			- Generate Java code & classes and utilize hotswap and class loader as JSP to Tomcat
+			- Don't do above, construct model object without generating new java code. But need a loading procedure
+	2. 

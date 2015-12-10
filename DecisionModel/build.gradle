@@ -27,8 +27,8 @@ dependencies {
 
 ext.antlr = [
     grammarPackage: 'ouhang.decisionmodel.antlr',
-    sourceDir: 'src/antlr',
-    destinationDir: 'src-generated/antlr'
+    sourceDir: 'src/main/antlr',
+    destinationDir: 'src-generated/java/ouohang/decisionmodel/antlr'
 ]
 
 sourceSets.main.java.srcDirs += antlr.destinationDir // Add generated files into java sources
