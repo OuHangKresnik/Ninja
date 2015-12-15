@@ -1,5 +1,6 @@
-mport RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time
+
 led = 11
 
 GPIO.setmode(GPIO.BOARD)
