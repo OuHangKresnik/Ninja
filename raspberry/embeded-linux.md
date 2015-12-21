@@ -1,0 +1,38 @@
+1. The meaning of directories under linux:
+  - /bin: Commands (binary executables) used by all users, or say essential user command binaries  
+  - /sbin: system binaries
+  - /boot: static files of the boot loader  
+  - /dev: device files; terminal devices, usb, or any device attached to the system  
+    - /dev/null: a pseudo device which doesn't exist. Sometimes garbage output is redirected to /dev/null so that it gets lost forever.  
+  - /etc: host-specific system configuration; config files required by all programs; startup and shutdown shell scripts of individual programs  
+    - /etc/X11: config for X-window system  
+    - /etc/passwd: pw of system users in a shadow file  
+    - /etc/modules.conf: config files for system modules  
+    - /etc/bashrc: system defaults and aliases used by bash shell  
+    - /etc/fstab: info of disk drive and their mount point  
+    - /etc/init.d: service startup script  
+    - /etc/inittab: INIT process and their interaction at various run level  
+    - /etc/profile: bash shell defaults  
+  - /lib: essential shared libraries and kernel modules; supports binaries under /bin and /sbin  
+  - /opt: optional add-on applications  
+  - /mnt: tmp mount directory where sysadmins can mount filesystems  
+  - /srv: service data  
+  - /var: variable files; content of the files that are expected to grow can be found in this dir; it includes:  
+    - /var/log: system log files  
+    - /var/lib: packages and database files  
+    - /var/mail: emails  
+    - /var/spool: print queues  
+    - /var/lock: lock files  
+    - /var/tmp: temp files needed across reboots  
+  - /proc: process information; a pseudo filesystem contains info about running process; a virtual filesystem with txt information about system resources  
+    - /proc/stat: detailed statistics of the current system  
+    - /proc/meminfo: memory usage information  
+    - /proc/cpuinfo: CPU information  
+    - /proc/filesystems: file system information being used currently  
+    - /proc/modules: currently using kernel module  
+  - /usr: all stuff for second level program  
+  - /sys: a virtual filesystem, which stores and allows modification of the devices connected to the system
+  - /root: super admin's home  
+  - /media: temp mount directory created for removable devices.  
+
+2. 

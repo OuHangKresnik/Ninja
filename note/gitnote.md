@@ -15,4 +15,5 @@
    It works.
 3. Use "git log" you can see all commits for this branch
 4. git remote set-url origin https://OuHangKresnik@github.com/OuHangKresnik/Ninja.git
-5. remove tracked files from git: git rm -r --cached *.class
+5. remove tracked files from git: git rm -r --cached \*.class
+6. Count how many lines in files within one repo: git ls-files | xargs cat | wc -l

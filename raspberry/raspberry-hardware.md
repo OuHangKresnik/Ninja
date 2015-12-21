@@ -1,6 +1,6 @@
-1. Raspberry Pi 2B
-  - It has 1 GB Ram; 40 GPIO pins
-
+1. Raspberry Pi 2B has 1 GB Ram; 40 GPIO pins
+2. "cat /proc/cpuinfo", you can see it uses 4 ARM v7 processors
+3. GPIO: 
 
 Term:
 GPIO: General-purpose input/output  
@@ -15,4 +15,6 @@ SPI: Serial Peripheral Interface Bus. A synchronous serial communication interfa
   - SCLK: serial clock (output from master)
   - MOSI: Master Output, Slave Input
   - MISO: Master Input, Slave Output
-  - SS: Slave Select
+  - SS: Slave Select  
+VCC: Volt Current Condenser which is positive, GND is the corresponding negative.
+  - For 99% uses, v+ == Vcc, unless you are working with a multiple rail circuit
