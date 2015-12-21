@@ -26,3 +26,6 @@
     - sudo sh -c ‘echo “sudo /bin/sh /etc/X11/Xsession.d/xinput\_calibrator\_pointercal.sh” >> /etc/xdg/lxsession/LXDE-pi/autostart’
 
 3. All logs are in /var/log
+4. Virtual Network Computing system enables us to interact with GUI of Raspberry Pi using your desktop PC
+  - sudo apt-get install tightvncserver
+  - install TightVNC viewer on your computer
