@@ -29,10 +29,12 @@
     - /proc/meminfo: memory usage information  
     - /proc/cpuinfo: CPU information  
     - /proc/filesystems: file system information being used currently  
-    - /proc/modules: currently using kernel module  
+    - /proc/modules: currently using kernel module 
+    - /proc/net/wireless: information of wifi including signal level, noise, link, and so on  
   - /usr: all stuff for second level program  
   - /sys: a virtual filesystem, which stores and allows modification of the devices connected to the system
   - /root: super admin's home  
   - /media: temp mount directory created for removable devices.  
 
-2. 
+2. Some Commands:  
+  - iwconfig: see information of wifi

@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F8B3207F1C2ABDD800FD7D17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3207E1C2ABDD800FD7D17 /* AppDelegate.swift */; };
+		F8B320811C2ABDD800FD7D17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B320801C2ABDD800FD7D17 /* ViewController.swift */; };
+		F8B320841C2ABDD800FD7D17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B320821C2ABDD800FD7D17 /* Main.storyboard */; };
+		F8B320861C2ABDD800FD7D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B320851C2ABDD800FD7D17 /* Assets.xcassets */; };
+		F8B320891C2ABDD800FD7D17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B320871C2ABDD800FD7D17 /* LaunchScreen.storyboard */; };
+		F8B320941C2ABDD800FD7D17 /* VideoTackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B320931C2ABDD800FD7D17 /* VideoTackTests.swift */; };
+		F8B3209F1C2ABDD800FD7D17 /* VideoTackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B3209E1C2ABDD800FD7D17 /* VideoTackUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8B320901C2ABDD800FD7D17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B320731C2ABDD800FD7D17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8B3207A1C2ABDD800FD7D17;
+			remoteInfo = VideoTack;
+		};
+		F8B3209B1C2ABDD800FD7D17 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B320731C2ABDD800FD7D17 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8B3207A1C2ABDD800FD7D17;
+			remoteInfo = VideoTack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F8B3207B1C2ABDD800FD7D17 /* VideoTack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoTack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B3207E1C2ABDD800FD7D17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8B320801C2ABDD800FD7D17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8B320831C2ABDD800FD7D17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8B320851C2ABDD800FD7D17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F8B320881C2ABDD800FD7D17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F8B3208A1C2ABDD800FD7D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8B3208F1C2ABDD800FD7D17 /* VideoTackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoTackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B320931C2ABDD800FD7D17 /* VideoTackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTackTests.swift; sourceTree = "<group>"; };
+		F8B320951C2ABDD800FD7D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8B3209A1C2ABDD800FD7D17 /* VideoTackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoTackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B3209E1C2ABDD800FD7D17 /* VideoTackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTackUITests.swift; sourceTree = "<group>"; };
+		F8B320A01C2ABDD800FD7D17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8B320781C2ABDD800FD7D17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B3208C1C2ABDD800FD7D17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B320971C2ABDD800FD7D17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F8B320721C2ABDD800FD7D17 = {
+			isa = PBXGroup;
+			children = (
+				F8B3207D1C2ABDD800FD7D17 /* VideoTack */,
+				F8B320921C2ABDD800FD7D17 /* VideoTackTests */,
+				F8B3209D1C2ABDD800FD7D17 /* VideoTackUITests */,
+				F8B3207C1C2ABDD800FD7D17 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F8B3207C1C2ABDD800FD7D17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8B3207B1C2ABDD800FD7D17 /* VideoTack.app */,
+				F8B3208F1C2ABDD800FD7D17 /* VideoTackTests.xctest */,
+				F8B3209A1C2ABDD800FD7D17 /* VideoTackUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8B3207D1C2ABDD800FD7D17 /* VideoTack */ = {
+			isa = PBXGroup;
+			children = (
+				F8B3207E1C2ABDD800FD7D17 /* AppDelegate.swift */,
+				F8B320801C2ABDD800FD7D17 /* ViewController.swift */,
+				F8B320821C2ABDD800FD7D17 /* Main.storyboard */,
+				F8B320851C2ABDD800FD7D17 /* Assets.xcassets */,
+				F8B320871C2ABDD800FD7D17 /* LaunchScreen.storyboard */,
+				F8B3208A1C2ABDD800FD7D17 /* Info.plist */,
+			);
+			path = VideoTack;
+			sourceTree = "<group>";
+		};
+		F8B320921C2ABDD800FD7D17 /* VideoTackTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8B320931C2ABDD800FD7D17 /* VideoTackTests.swift */,
+				F8B320951C2ABDD800FD7D17 /* Info.plist */,
+			);
+			path = VideoTackTests;
+			sourceTree = "<group>";
+		};
+		F8B3209D1C2ABDD800FD7D17 /* VideoTackUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F8B3209E1C2ABDD800FD7D17 /* VideoTackUITests.swift */,
+				F8B320A01C2ABDD800FD7D17 /* Info.plist */,
+			);
+			path = VideoTackUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8B3207A1C2ABDD800FD7D17 /* VideoTack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8B320A31C2ABDD800FD7D17 /* Build configuration list for PBXNativeTarget "VideoTack" */;
+			buildPhases = (
+				F8B320771C2ABDD800FD7D17 /* Sources */,
+				F8B320781C2ABDD800FD7D17 /* Frameworks */,
+				F8B320791C2ABDD800FD7D17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoTack;
+			productName = VideoTack;
+			productReference = F8B3207B1C2ABDD800FD7D17 /* VideoTack.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F8B3208E1C2ABDD800FD7D17 /* VideoTackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8B320A61C2ABDD800FD7D17 /* Build configuration list for PBXNativeTarget "VideoTackTests" */;
+			buildPhases = (
+				F8B3208B1C2ABDD800FD7D17 /* Sources */,
+				F8B3208C1C2ABDD800FD7D17 /* Frameworks */,
+				F8B3208D1C2ABDD800FD7D17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8B320911C2ABDD800FD7D17 /* PBXTargetDependency */,
+			);
+			name = VideoTackTests;
+			productName = VideoTackTests;
+			productReference = F8B3208F1C2ABDD800FD7D17 /* VideoTackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F8B320991C2ABDD800FD7D17 /* VideoTackUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8B320A91C2ABDD800FD7D17 /* Build configuration list for PBXNativeTarget "VideoTackUITests" */;
+			buildPhases = (
+				F8B320961C2ABDD800FD7D17 /* Sources */,
+				F8B320971C2ABDD800FD7D17 /* Frameworks */,
+				F8B320981C2ABDD800FD7D17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8B3209C1C2ABDD800FD7D17 /* PBXTargetDependency */,
+			);
+			name = VideoTackUITests;
+			productName = VideoTackUITests;
+			productReference = F8B3209A1C2ABDD800FD7D17 /* VideoTackUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8B320731C2ABDD800FD7D17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Hang OU";
+				TargetAttributes = {
+					F8B3207A1C2ABDD800FD7D17 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					F8B3208E1C2ABDD800FD7D17 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = F8B3207A1C2ABDD800FD7D17;
+					};
+					F8B320991C2ABDD800FD7D17 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = F8B3207A1C2ABDD800FD7D17;
+					};
+				};
+			};
+			buildConfigurationList = F8B320761C2ABDD800FD7D17 /* Build configuration list for PBXProject "VideoTack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8B320721C2ABDD800FD7D17;
+			productRefGroup = F8B3207C1C2ABDD800FD7D17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8B3207A1C2ABDD800FD7D17 /* VideoTack */,
+				F8B3208E1C2ABDD800FD7D17 /* VideoTackTests */,
+				F8B320991C2ABDD800FD7D17 /* VideoTackUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8B320791C2ABDD800FD7D17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B320891C2ABDD800FD7D17 /* LaunchScreen.storyboard in Resources */,
+				F8B320861C2ABDD800FD7D17 /* Assets.xcassets in Resources */,
+				F8B320841C2ABDD800FD7D17 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B3208D1C2ABDD800FD7D17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B320981C2ABDD800FD7D17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8B320771C2ABDD800FD7D17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B320811C2ABDD800FD7D17 /* ViewController.swift in Sources */,
+				F8B3207F1C2ABDD800FD7D17 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B3208B1C2ABDD800FD7D17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B320941C2ABDD800FD7D17 /* VideoTackTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B320961C2ABDD800FD7D17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B3209F1C2ABDD800FD7D17 /* VideoTackUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8B320911C2ABDD800FD7D17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8B3207A1C2ABDD800FD7D17 /* VideoTack */;
+			targetProxy = F8B320901C2ABDD800FD7D17 /* PBXContainerItemProxy */;
+		};
+		F8B3209C1C2ABDD800FD7D17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8B3207A1C2ABDD800FD7D17 /* VideoTack */;
+			targetProxy = F8B3209B1C2ABDD800FD7D17 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F8B320821C2ABDD800FD7D17 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8B320831C2ABDD800FD7D17 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F8B320871C2ABDD800FD7D17 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8B320881C2ABDD800FD7D17 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8B320A11C2ABDD800FD7D17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8B320A21C2ABDD800FD7D17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8B320A41C2ABDD800FD7D17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VideoTack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hangou.VideoTack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F8B320A51C2ABDD800FD7D17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VideoTack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hangou.VideoTack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F8B320A71C2ABDD800FD7D17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VideoTackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hangou.VideoTackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoTack.app/VideoTack";
+			};
+			name = Debug;
+		};
+		F8B320A81C2ABDD800FD7D17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VideoTackTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hangou.VideoTackTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoTack.app/VideoTack";
+			};
+			name = Release;
+		};
+		F8B320AA1C2ABDD800FD7D17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VideoTackUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hangou.VideoTackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VideoTack;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F8B320AB1C2ABDD800FD7D17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VideoTackUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hangou.VideoTackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VideoTack;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8B320761C2ABDD800FD7D17 /* Build configuration list for PBXProject "VideoTack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B320A11C2ABDD800FD7D17 /* Debug */,
+				F8B320A21C2ABDD800FD7D17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8B320A31C2ABDD800FD7D17 /* Build configuration list for PBXNativeTarget "VideoTack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B320A41C2ABDD800FD7D17 /* Debug */,
+				F8B320A51C2ABDD800FD7D17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F8B320A61C2ABDD800FD7D17 /* Build configuration list for PBXNativeTarget "VideoTackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B320A71C2ABDD800FD7D17 /* Debug */,
+				F8B320A81C2ABDD800FD7D17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F8B320A91C2ABDD800FD7D17 /* Build configuration list for PBXNativeTarget "VideoTackUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B320AA1C2ABDD800FD7D17 /* Debug */,
+				F8B320AB1C2ABDD800FD7D17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8B320731C2ABDD800FD7D17 /* Project object */;
+}

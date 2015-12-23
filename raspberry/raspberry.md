@@ -32,5 +32,8 @@
 5. WiringPi(http://wiringpi.com) is an Arduino wiring-like library in C with many other language wrapper for Pi.
 6. BCM mode VS BOARD mode in GPIO:
  The GPIO.BOARD option specifies that you are referring to the pins by the number of the pin in the plug. i.e. the number printed on the board
- The GPIO.BCM means you are referring by "Broadcom SOC channel". Because my Raspberry uses Broadcom BCM2836 chip which is built with 4 ARM cores.
+ The GPIO.BCM means you are referring by "Broadcom SOC channel". Because my Raspberry uses Broadcom BCM2836 chip which is built with 4 ARM cores.  
+
+7. About Wireless tool library.  
+The command "iwconfig" shows all information of wifi. Actually we can find the source code of this command to see how to do similar program using c or c++. cfg80211 is the Linux 802.11 configuration API which replaces Wireless-Extensions. nl80211 is the new 802.11 netlink interface public header. Together with cfg80211 it is intended to replace Wireless-Extensions.  
 
