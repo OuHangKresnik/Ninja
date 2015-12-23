@@ -1,6 +1,8 @@
 1. Raspberry Pi 2B has 1 GB Ram; 40 GPIO pins
 2. "cat /proc/cpuinfo", you can see it uses 4 ARM v7 processors
-3. GPIO: 
+3. GPIO: the input/output pin of Raspberry Pi GPIO is rated at 3.3V, so be careful when you want to use it as input. 
+4. 
+
 
 Term:
 GPIO: General-purpose input/output  

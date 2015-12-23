@@ -29,3 +29,8 @@
 4. Virtual Network Computing system enables us to interact with GUI of Raspberry Pi using your desktop PC
   - sudo apt-get install tightvncserver
   - install TightVNC viewer on your computer
+5. WiringPi(http://wiringpi.com) is an Arduino wiring-like library in C with many other language wrapper for Pi.
+6. BCM mode VS BOARD mode in GPIO:
+ The GPIO.BOARD option specifies that you are referring to the pins by the number of the pin in the plug. i.e. the number printed on the board
+ The GPIO.BCM means you are referring by "Broadcom SOC channel". Because my Raspberry uses Broadcom BCM2836 chip which is built with 4 ARM cores.
+
