@@ -37,4 +37,5 @@
   - /media: temp mount directory created for removable devices.  
 
 2. Some Commands:  
-  - iwconfig: see information of wifi
+  - iwconfig: see information of wifi  
+  - ipconfig: 
