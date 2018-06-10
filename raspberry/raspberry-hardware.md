@@ -21,3 +21,5 @@ SPI: Serial Peripheral Interface Bus. A synchronous serial communication interfa
   - SS: Slave Select  
 VCC: Volt Current Condenser which is positive, GND is the corresponding negative.
   - For 99% uses, v+ == Vcc, unless you are working with a multiple rail circuit
+GND: Ground
+
