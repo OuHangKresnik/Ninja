@@ -8,4 +8,5 @@
 * CC debugger: to connect CC2541 to a CC debugger, only VCC, GND, RST, DC and DD are necessary
 * Unfortunatly, the only official tool to write program for controlling is IAR, which costs thousands of dollars
 * A useful tool https://gitlab.com/timwilkinson/BlueBasic
-*
+* 电压: 电场中两点电势的差值
+* 赫兹: 1Hz = 1/s 一次/秒
